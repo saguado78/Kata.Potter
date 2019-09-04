@@ -6,5 +6,8 @@ namespace Potter.Logic
     {
         public List<Book> CartBooks { get; set; }
         
+        public ShoppingCart(){
+            CartBooks= new List<Book>();
+        }
     }
 }
