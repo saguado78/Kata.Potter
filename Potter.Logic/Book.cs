@@ -3,14 +3,10 @@ namespace Potter.Logic
     public class Book
     {
 
-        public string Title { get; set; }   
-        public double BasicPrice { get; set; }
-        public double FinalPrice { get; set; }
+        public string Title { get; set; }  
 
         public Book(int bookNumber, double price){
          Title=Select_title(bookNumber);   
-         BasicPrice=price;
-         FinalPrice=price;
         }
         
         public const string first_title="First book";
@@ -18,8 +14,6 @@ namespace Potter.Logic
         public const string third_title="third book";
         public const string fourth_title="fourth book";
         public const string fifth_title="fifth book";
-
-
 
         public string Select_title(int bookNumer){
             string result=string.Empty;
