@@ -43,6 +43,10 @@ namespace Potter.Logic
                     res.Add(SelectBookWithoutDiscountByNumber(4));
                 }
                 if(numBooks05NoDiscount>0 && numBooks05NoDiscount!=TotalBooksWithoutDiscount){
+                    if (!(res.Count==4 & (numBooks01NoDiscount
+                                        +numBooks02NoDiscount
+                                        +numBooks03NoDiscount
+                                        +numBooks04NoDiscount)>6))
                     res.Add(SelectBookWithoutDiscountByNumber(5));
                 }
             }

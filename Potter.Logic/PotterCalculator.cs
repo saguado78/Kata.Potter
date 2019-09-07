@@ -9,7 +9,7 @@ namespace Potter.Logic
         public double Calculate(ShoppingCart cart){
             Calculate_discounts(cart);
             double res= (from Book item in cart.CartBooks select item.FinalPrice).Sum();
-            return res;
+            return System.Math.Round(res,2,MidpointRounding.AwayFromZero);
         }
 
         private void Calculate_discounts(ShoppingCart cart)

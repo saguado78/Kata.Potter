@@ -18,7 +18,7 @@ namespace Potter.Logic
         }
 
         public void ApplyDiscount(double discountPercentage){
-            FinalPrice=(100.0-discountPercentage)*BasicPrice/100.0;
+            FinalPrice=System.Math.Round((100.0-discountPercentage)*BasicPrice/100.0,2,System.MidpointRounding.AwayFromZero);
         }
         
         public const string first_title="First book";
