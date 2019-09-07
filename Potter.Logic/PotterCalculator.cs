@@ -14,22 +14,30 @@ namespace Potter.Logic
 
         private void Calculate_discounts(ShoppingCart cart)
         {
-            List<Book> setOfBooks=cart.Set_of_different_titles_without_discount();
-            int numberOfBooks=setOfBooks.Count();
-            foreach(Book aBook in setOfBooks){
-                if(numberOfBooks==2){
-                    aBook.ApplyDiscount(5.0);
+            List<Book> setOfBooks=null;
+            int numberOfBooks=0;
+            setOfBooks=cart.Set_of_different_titles_without_discount();
+            numberOfBooks=setOfBooks.Count();
+            while(numberOfBooks>0){
+                foreach(Book aBook in setOfBooks){
+                    if(numberOfBooks==2){
+                        aBook.ApplyDiscount(5.0);
+                    }
+                    else if(numberOfBooks==3){
+                        aBook.ApplyDiscount(10.0);
+                    }
+                    else if(numberOfBooks==4){
+                        aBook.ApplyDiscount(20.0);
+                    }
+                    else{
+                        aBook.ApplyDiscount(25.0);
+                    }
                 }
-                else if(numberOfBooks==3){
-                    aBook.ApplyDiscount(10.0);
-                }
-                else if(numberOfBooks==4){
-                    aBook.ApplyDiscount(20.0);
-                }
-                else{
-                    aBook.ApplyDiscount(25.0);
-                }
+                // next iteration
+                setOfBooks=cart.Set_of_different_titles_without_discount();
+                numberOfBooks=setOfBooks.Count();
             }
+            
         }
     }
 }
