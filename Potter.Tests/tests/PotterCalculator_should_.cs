@@ -74,7 +74,7 @@ namespace Potter.Tests.tests
             
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,4*defaultPrice*0.20,"unexpected result: " + res.ToString()+" // Expected 27.2");
+            Assert.AreEqual(res,4*defaultPrice*0.80,"unexpected result: " + res.ToString()+" // Expected 27.2");
         }
     }
 }

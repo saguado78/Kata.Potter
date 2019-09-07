@@ -20,8 +20,11 @@ namespace Potter.Logic
                 if(numberOfBooks==2){
                     aBook.ApplyDiscount(5.0);
                 }
-                else{
+                else if(numberOfBooks==3){
                     aBook.ApplyDiscount(10.0);
+                }
+                else{
+                    aBook.ApplyDiscount(20.0);
                 }
                 
             }
