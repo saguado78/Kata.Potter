@@ -41,7 +41,7 @@ namespace Potter.Tests.tests
 
             double res= calc.Calculate(new ShoppingCart());
 
-            Assert.AreEqual(res,0,"unexpected result: " + res.ToString()+" // Expected 0");
+            Assert.AreEqual(0,res,"unexpected result: " + res.ToString()+" // Expected 0");
         }
 
         [Test]
@@ -51,7 +51,7 @@ namespace Potter.Tests.tests
 
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,defaultPrice,"unexpected result: " +res.ToString() + " // Expected 16");
+            Assert.AreEqual(defaultPrice,res,"unexpected result: " +res.ToString() + " // Expected 16");
         }
         
         [Test]
@@ -61,7 +61,7 @@ namespace Potter.Tests.tests
 
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,2*defaultPrice,"unexpected result: " + res.ToString()+" // Expected 16");
+            Assert.AreEqual(2*defaultPrice,res,"unexpected result: " + res.ToString()+" // Expected 16");
         }
 
         [Test]
@@ -71,7 +71,7 @@ namespace Potter.Tests.tests
 
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,2*defaultPrice*0.95,"unexpected result: " + res.ToString()+" // Expected 15.2");
+            Assert.AreEqual(2*defaultPrice*0.95,res,"unexpected result: " + res.ToString()+" // Expected 15.2");
         }
 
         [Test]
@@ -81,7 +81,7 @@ namespace Potter.Tests.tests
 
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,3*defaultPrice*0.90,"unexpected result: " + res.ToString()+" // Expected 21.6");
+            Assert.AreEqual(3*defaultPrice*0.90,res,"unexpected result: " + res.ToString()+" // Expected 21.6");
         }
 
         [Test]
@@ -91,7 +91,7 @@ namespace Potter.Tests.tests
             
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,4*defaultPrice*0.80,"unexpected result: " + res.ToString()+" // Expected 27.2");
+            Assert.AreEqual(4*defaultPrice*0.80,res,"unexpected result: " + res.ToString()+" // Expected 27.2");
         }
 
         [Test]
@@ -101,7 +101,7 @@ namespace Potter.Tests.tests
             
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,5*defaultPrice*0.75,"unexpected result: " + res.ToString()+" // Expected 30.0");
+            Assert.AreEqual(5*defaultPrice*0.75,res,"unexpected result: " + res.ToString()+" // Expected 30.0");
         }
 
         [Test]
@@ -111,7 +111,7 @@ namespace Potter.Tests.tests
 
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,4*defaultPrice*0.95,"unexpected result: " + res.ToString()+" // Expected 15.2");
+            Assert.AreEqual(4*defaultPrice*0.95,res,"unexpected result: " + res.ToString()+" // Expected 15.2");
         }
 
         [Test]
@@ -121,7 +121,7 @@ namespace Potter.Tests.tests
 
             double res= calc.Calculate(cart);
 
-            Assert.AreEqual(res,6*defaultPrice*0.90,"unexpected result: " + res.ToString()+" // Expected 43.4");
+            Assert.AreEqual(6*defaultPrice*0.90,res,"unexpected result: " + res.ToString()+" // Expected 43.4");
         }
     }
 }
