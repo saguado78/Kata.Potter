@@ -123,5 +123,15 @@ namespace Potter.Tests.tests
 
             Assert.AreEqual(6*defaultPrice*0.90,res,"unexpected result: " + res.ToString()+" // Expected 43.4");
         }
+
+        [Test]
+        public void apply_2_groups_of_4_over_one_group_of_5(){
+            PotterCalculator calc = new PotterCalculator();
+            ShoppingCart cart=BuildMeAShoppingCart(2,2,2,1,1);
+
+            double res= calc.Calculate(cart);
+
+            Assert.AreEqual(2*4*defaultPrice*0.80,res,"unexpected result: " + res.ToString()+" // Expected 51.2");
+        }
     }
 }
