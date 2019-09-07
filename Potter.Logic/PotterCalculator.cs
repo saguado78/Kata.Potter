@@ -29,7 +29,6 @@ namespace Potter.Logic
                 else{
                     aBook.ApplyDiscount(25.0);
                 }
-                
             }
         }
     }

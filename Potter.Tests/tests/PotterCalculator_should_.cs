@@ -103,5 +103,15 @@ namespace Potter.Tests.tests
 
             Assert.AreEqual(res,5*defaultPrice*0.75,"unexpected result: " + res.ToString()+" // Expected 30.0");
         }
+
+        [Test]
+        public void apply_5_percent_discount_when_buying_2_copy_of_2_different_books(){
+            PotterCalculator calc = new PotterCalculator();
+            ShoppingCart cart=BuildMeAShoppingCart(2,2,0,0,0);
+
+            double res= calc.Calculate(cart);
+
+            Assert.AreEqual(res,4*defaultPrice*0.95,"unexpected result: " + res.ToString()+" // Expected 15.2");
+        }
     }
 }
