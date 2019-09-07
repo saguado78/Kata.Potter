@@ -4,9 +4,21 @@ namespace Potter.Logic
     {
 
         public string Title { get; set; }  
+        public double BasicPrice{get;set;}
+        public double FinalPrice{get;set;}
 
         public Book(int bookNumber, double price){
-         Title=Select_title(bookNumber);   
+            Title=Select_title(bookNumber); 
+            BasicPrice=price;
+            FinalPrice=price;  
+        }
+
+        public bool HasDiscountApplied(){
+            return BasicPrice!=FinalPrice;
+        }
+
+        public void ApplyDiscount(double discountPercentage){
+            FinalPrice=(100.0-discountPercentage)*BasicPrice/100.0;
         }
         
         public const string first_title="First book";
@@ -15,7 +27,7 @@ namespace Potter.Logic
         public const string fourth_title="fourth book";
         public const string fifth_title="fifth book";
 
-        public string Select_title(int bookNumer){
+        public static string Select_title(int bookNumer){
             string result=string.Empty;
             switch(bookNumer){
                 case 1:
